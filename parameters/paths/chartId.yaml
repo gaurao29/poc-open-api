@@ -1,0 +1,6 @@
+name: chartId
+description: The unique identifier of the chart
+in: path
+required: true
+schema:
+  $ref: '../../schemas/charts/ChartId.yaml'

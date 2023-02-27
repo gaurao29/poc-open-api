@@ -1,0 +1,28 @@
+
+get:
+    summary: Get most recent chart or edition by chart id
+    operationId: getChartByChartId
+    tags:
+        - Charts
+    parameters:
+        - $ref: "../../parameters/paths/chartId.yaml"
+    responses:
+        "200":
+            description: All charts from system
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/charts/Charts.yaml"
+        404:
+            description: No chart found
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        500:
+            description: Unknown error
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        

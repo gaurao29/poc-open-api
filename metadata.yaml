@@ -1,0 +1,28 @@
+roles:
+# This section captures the set of roles that are available to be associated with your API endpoints
+  - role: ROLE_USER
+    description: "A consumer of the application."
+  - role: ROLE_MECHANIC
+    description: "Skilled at working with machines."
+  - role: ROLE_ADMIN
+    description: "Administrator. Oversees everything."
+
+api:
+# This section defines actual associations between API endpoints and roles at the global level
+# This can be overridden at the individual API endpoint level
+  roles:
+    - ROLE_USER
+    - ROLE_MECHANIC
+    - ROLE_ADMIN
+  # The default role (and an associated user) that should be used to access all endpoints
+  # This can be overridden at the individual API endpoint level
+  default_role: ROLE_USER
+  #
+  endpoint_groups:
+  # This section allows Method and URL path based mapping between endpoints and roles
+  #
+  # This specifies that ROLE_USER should have access to all POST endpoints
+    - methods:
+        - "POST"
+      roles:
+        - ROLE_USER

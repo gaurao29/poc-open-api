@@ -1,0 +1,64 @@
+get:
+    summary: Get all charts
+    operationId: getAllCharts
+    tags:
+        - Charts
+    responses:
+        "200":
+            description: Get all charts
+            content:
+                application/json:
+                    schema:
+                        type: array
+                        items:
+                          $ref: "../../schemas/charts/Charts.yaml"
+        404:
+            description: No chart found
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        500:
+            description: Unknown error
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        default:
+            description: Unexpected error
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+post:
+    summary: Create new chart
+    operationId: createNewChart
+    tags:
+        - Charts
+    responses:
+        "200":
+            description: Get all charts
+            content:
+                application/json:
+                    schema:
+                        type: array
+                        items:
+                          $ref: "../../schemas/charts/Charts.yaml"
+        404:
+            description: No chart found
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        500:
+            description: Unknown error
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"
+        default:
+            description: Unexpected error
+            content:
+                application/json:
+                    schema:
+                        $ref: "../../schemas/common/Error.yaml"

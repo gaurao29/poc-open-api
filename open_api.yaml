@@ -1,0 +1,36 @@
+openapi: "3.0.0"
+info:
+    version: "1.0.0"
+    title: "POC for API Design and Collaboration"
+    description: Manage Charts
+servers:
+    - url: https://localhost:9292
+tags:
+  - name: Charts
+  - name: Users
+
+paths:
+    /meta/charts:
+        $ref: "./paths/charts/charts.yaml"
+    /meta/charts/{chartId}/edition:
+        $ref: "./paths/charts/chart.yaml"
+components:
+    parameters:
+        $ref: "./parameters/_index.yaml"
+    schemas:
+        $ref: "./schemas/_index.yaml"
+    securitySchemes:
+        $ref: "./securitySchemas/_index.yaml"
+            
+security:
+    - JwtToken: []
+   # - ApiKey: []
+
+# Team wise vs centralised have pointers ready
+# get feedback from devloper on creating new API endpoint
+
+# Best way to schedule the job
+# Jobschedular
+
+#Questions:
+

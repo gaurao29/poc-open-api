@@ -1,0 +1,6 @@
+Error:
+  $ref: "./common/Error.yaml"
+ChartId:
+  $ref: "./charts/ChartId.yaml"
+Chart:
+  $ref: "./charts/Charts.yaml"
